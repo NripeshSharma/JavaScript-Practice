@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aquamarine;
+        }
+        #voilet{
+            background-color: #ce9aff;
+        }
+        #black{
+            background-color: black;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <!-- calling change Bg in every span -->
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="">
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, earum! Adipisci, corporis vero, excepturi totam
+        rem dolorum voluptate dolore similique harum autem voluptates cum sit sapiente accusantium accusamus beatae
+        quisquam maiores, minima velit nisi mollitia. Rem sit aperiam earum quos eius praesentium quibusdam eligendi
+        dolor. Libero dolorem corporis totam provident odit accusamus, id dolorum, facilis deleniti natus porro delectus
+        quaerat blanditiis commodi ab! Explicabo pariatur, accusantium maxime voluptatem et, tenetur minima
+        reprehenderit eos eius ut tempora nihil neque harum cum quas? Cupiditate eos architecto, itaque temporibus
+        corrupti, sed molestias, consequatur exercitationem beatae repellendus ullam! Minima voluptate, placeat
+        reprehenderit saepe beatae voluptates modi vero debitis libero quas, totam quia incidunt, ducimus tenetur nulla
+        a. Eius quia ratione asperiores. Magni facere molestias quis unde, obcaecati architecto exercitationem hic quos
+        rerum, provident voluptatibus! Quibusdam, ipsum? Quibusdam eius minus dolor voluptatem dolores voluptatum harum,
+        rerum nihil ullam aliquam culpa rem accusamus sapiente repellendus deserunt ut sint aliquid tenetur, molestiae
+        reiciendis veritatis? Et neque facere voluptate nam accusantium aliquid nesciunt saepe consectetur! Sapiente,
+        et. Aut hic laborum atque, in alias sapiente provident unde eius praesentium nihil minus. Quis veniam minus
+        sapiente dolor cum. Id, quae ab consequuntur officiis similique numquam quia blanditiis cupiditate architecto
+        esse consequatur debitis sit aut repudiandae exercitationem, officia repellendus sequi? Officia voluptate
+        libero, assumenda nobis mollitia ullam modi vero porro eligendi nulla repellat, unde consequuntur dolorum
+        nesciunt autem quas illo, fugit esse voluptatibus reprehenderit ex in adipisci? Ratione ipsum iure debitis odio
+        esse, ipsam magni. Harum impedit, magni similique tempore maiores, molestiae dicta at mollitia ratione dolores
+        quos molestias ea libero earum velit repudiandae doloribus eaque consequuntur delectus quibusdam voluptates illo
+        commodi? Facere, natus consectetur. Non amet aspernatur, id dolorem nobis commodi deleniti soluta voluptate
+        repudiandae nostrum quod temporibus, ad tempora dignissimos. Dicta, at alias, laboriosam, sint tempora dolorem
+        dolores eaque expedita sequi ad consequatur est aliquam assumenda consectetur temporibus doloremque voluptates
+        accusantium tempore quas aliquid minus! Quod sed necessitatibus tenetur rem delectus expedita omnis, soluta
+        doloribus saepe maxime ut, a, obcaecati modi reiciendis numquam eius odit. Architecto repellat totam ducimus
+        sit, debitis ea, et aut sapiente inventore similique temporibus expedita. Dolore sit placeat vel laudantium
+        distinctio consequuntur sequi fuga eveniet natus labore eaque nobis, sapiente magnam, dolores est necessitatibus
+        animi at? Quos amet harum eaque obcaecati explicabo. Illo veritatis tenetur sunt reiciendis distinctio
+        cupiditate eius incidunt aliquid eum aliquam, sequi expedita porro rerum ipsam? Laboriosam, optio impedit est
+        molestiae accusamus voluptatem! Ducimus impedit sunt ipsam delectus repellat incidunt beatae enim exercitationem
+        ipsa amet odit deleniti corporis quas pariatur inventore eligendi et animi rerum, quo aut? Perspiciatis dolorem
+        impedit veritatis natus ducimus voluptatem, atque corporis reiciendis aspernatur facilis tempore accusamus enim
+        autem ab quaerat neque fugiat. Tempora eos ut facere asperiores. Fugiat suscipit itaque expedita cupiditate modi
+        qui similique consequatur sapiente doloremque placeat est adipisci soluta voluptatibus, eaque iste eligendi
+        mollitia temporibus perspiciatis reiciendis. Quidem nisi, consequuntur id dicta quibusdam impedit recusandae
+        odit sunt expedita, odio dolor commodi reprehenderit pariatur adipisci assumenda sapiente nihil eaque rerum
+        asperiores est beatae ea quisquam.
+
+    </p>
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let text =  document.getElementsByClassName('text')
+            //console.log(text);
+            if(color == "#000000"){
+                //texts.style.color = "white";
+                for(let i=0;i<text.length;i++){
+                    text[i].style.color = "white";
+                }
+            }
+            else{
+                for(let i=0;i<text.length;i++){
+                    text[i].style.color = "#000000";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
